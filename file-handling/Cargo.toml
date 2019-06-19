@@ -1,0 +1,7 @@
+[package]
+name = "file-handling"
+version = "0.1.0"
+authors = ["Björn Svensson <bjorn.d.svensson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
