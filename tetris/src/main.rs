@@ -2,7 +2,7 @@ extern crate rand;
 extern crate sdl2;
 
 use sdl2::event::Event;
-use sdl2::image::{InitFlag, LoadTexture};
+// use sdl2::image::{InitFlag, LoadTexture};
 use sdl2::keyboard::Keycode;
 use sdl2::pixels::Color;
 use sdl2::rect::Rect;
@@ -508,10 +508,11 @@ fn main() {
         .build()
         .unwrap();
 
-    // Load background picture
-    sdl2::image::init(InitFlag::PNG | InitFlag::JPG).unwrap();
+    // // Load background picture
     let texture_creator: TextureCreator<_> = canvas.texture_creator();
-    let image_texture = texture_creator.load_texture("assets/my_image.png").unwrap();
+
+    // sdl2::image::init(InitFlag::PNG | InitFlag::JPG).unwrap();
+    // let image_texture = texture_creator.load_texture("assets/my_image.png").unwrap();
 
     // Create grid texture
     let grid = create_texture_rect(
@@ -578,7 +579,7 @@ fn main() {
 
         canvas.set_draw_color(Color::RGB(255, 0, 0));
         canvas.clear();
-        canvas.copy(&image_texture, None, None).unwrap();
+        // canvas.copy(&image_texture, None, None).unwrap();
 
         canvas
             .copy(
