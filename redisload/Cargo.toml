@@ -1,0 +1,8 @@
+[package]
+name = "redisload"
+version = "0.1.0"
+authors = ["Björn Svensson <bjorn.d.svensson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+redis_cluster_rs = "0.1.5"
