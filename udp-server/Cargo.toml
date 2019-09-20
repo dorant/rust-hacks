@@ -1,0 +1,8 @@
+[package]
+name = "udp-server"
+version = "0.1.0"
+authors = ["Björn Svensson <bjorn.d.svensson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tokio = "0.2.0-alpha.4"
