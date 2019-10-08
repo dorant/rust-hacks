@@ -1,0 +1,17 @@
+replicas: 1
+service:
+  type: LoadBalancer
+  annotations: {}
+#  nodePort:
+
+image:
+  name: bjornsv/simple-http-server
+  tag: latest
+  pullPolicy: Always
+
+livenessProbe:
+  initialDelaySeconds: 7
+  timeoutSeconds: 6
+  periodSeconds: 7
+
+message: "hello"

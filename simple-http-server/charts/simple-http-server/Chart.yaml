@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for deploying the simple-http-server
+name: simple-http-server
+version: 1.0.0
