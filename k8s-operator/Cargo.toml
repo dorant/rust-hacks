@@ -1,0 +1,23 @@
+[package]
+name = "k8s-operator"
+version = "0.1.0"
+authors = ["Björn Svensson <bjorn.d.svensson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+kube = "0.22.1"
+#kube = { version = "0.22.1", features = ["openapi"] }
+#k8s-openapi = { version = "0.6.0", default-features = false, features = ["v1_15"] }
+
+log = "0.4.8"
+env_logger = "0.7.1"
+futures = "0.3.1"
+
+# TODO: bump to 0.2.2 after reqwest uses tokio 0.2.2
+tokio = { version = "=0.2.0-alpha.6" }
+#tokio = { version = "=0.2.2" }
+anyhow = "1.0.19"
+
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"

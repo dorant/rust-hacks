@@ -1,0 +1,7 @@
+apiVersion: test.com/v1alpha1
+kind: RustNoop
+metadata:
+  name: example-noop
+spec:
+  # Add fields here
+  size: 3

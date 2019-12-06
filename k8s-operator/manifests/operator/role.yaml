@@ -1,0 +1,29 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: k8s-operator
+rules:
+# Access the owned CRD
+- apiGroups:
+  - test.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
+
+# Enable accessing all K8s resources
+- apiGroups:
+  - ""
+  resources:
+  - '*'
+  verbs:
+  - '*'
+
+# Enable Helm to access apps.deployments
+- apiGroups:
+  - "apps"
+  resources:
+  - "deployments"
+  verbs:
+  - '*'

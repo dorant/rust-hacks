@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: k8s-operator
+  template:
+    metadata:
+      labels:
+        name: k8s-operator
+    spec:
+      serviceAccountName: k8s-operator
+      containers:
+        - name: k8s-operator
+          image: bjornsv/k8s-operator:latest
+          imagePullPolicy: IfNotPresent
